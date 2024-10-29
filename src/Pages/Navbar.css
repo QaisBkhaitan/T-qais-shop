@@ -1,0 +1,26 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+a{
+    color: darkslateblue !important;
+    text-decoration: none !important;
+    padding: 20px;
+    justify-content: center;
+}
+.right-left{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-danger{
+    width: 90px;
+}
+.navbar{
+    border-radius: 50px;
+}
