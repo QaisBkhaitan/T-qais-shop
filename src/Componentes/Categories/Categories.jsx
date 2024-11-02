@@ -43,7 +43,7 @@ export default function Categories() {
 
             </div>
             <h2>Categories</h2>
-            <div className='scroll-container'>
+            <div className='scroll-container w-100'>
                 {error && <p className="error-message">Failed to load categories: {error}</p>}
 
                 {loading ? ( 
