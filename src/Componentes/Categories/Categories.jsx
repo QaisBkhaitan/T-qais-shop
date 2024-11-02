@@ -3,6 +3,8 @@ import axios from 'axios';
 import './Catrgories.css';
 import { Link } from 'react-router-dom';
 import ClipLoader from 'react-spinners/ClipLoader'; 
+import homeImage from '../../assets/home.png';
+
 
 export default function Categories() {
     const [categories, setCategories] = useState([]);
@@ -30,7 +32,7 @@ export default function Categories() {
             <div className='homePage'>
                 <h2>home</h2>
                 <div className='homeDis'>
-                <img src='src/assets/home.png' className='ecom'/>
+                <img src={homeImage} className="ecom" />
                 <div className='dis'>
                     <h2>Welcome to E-commerce!</h2>
                     <h3>We're dedicated to delivering an outstanding shopping experience, offering premium products and exceptional customer service.</h3>

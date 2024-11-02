@@ -4,6 +4,8 @@ import { Slide, toast, Zoom } from 'react-toastify';
 import { object, string } from 'yup';
 import './Order.css'
 import { useNavigate } from 'react-router-dom';
+import homeImage from '../../assets/home.png';
+
 export default function Order() {
   const [errors , setErrors ] = useState([]);
   const navigate = useNavigate();
@@ -97,7 +99,7 @@ export default function Order() {
     <>
     <div className='order'>
       <h2>ORDER</h2>
-      <img src='src/assets/home.png' className='w-50 p-3'/>
+      <img src={homeImage} className='w-50 p-3'/>
       <form onSubmit={handleSubmit}>
         <input type='text' value={order.couponName} onChange={handleChange} className='form-control' placeholder='coupon Name' name='couponName'/>
         <input type='text' value={order.address} onChange={handleChange} className='form-control'placeholder='address' name='address'/>

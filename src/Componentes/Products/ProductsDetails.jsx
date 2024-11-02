@@ -99,11 +99,34 @@ export default function ProductsDetails() {
               <p className='text-decoration-line-through link-danger'>Original Price: ${product.price}</p>
             )}
             <p>{product.description}</p>
-            <h4>Reviews: {product.reviews}</h4>
-            <button type="button" className="btn btn-outline-success" onClick={() => addToCard(product._id)}>Add to Cart</button>
+            
+            
+            <div className="reviews mt-4">
+              <h4 className="mb-3">Customer Reviews</h4>
+              {product.reviews.length ? (
+                product.reviews.map((review, index) => (
+                  <div key={index} className="card mb-3 shadow-sm">
+                    <div className="card-body">
+                      <div className="d-flex justify-content-between align-items-center">
+                        <h5 className="card-title">{review.createdBy.userName}</h5>
+                        <span className="badge bg-success">{review.rating} ★</span>
+                      </div>
+                      <p className="card-text">{review.comment}</p>
+                      <small className="text-muted">Reviewed on: {new Date(review.createdAt).toLocaleDateString()}</small>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p>No reviews available.</p>
+              )}
+            </div>
+  
+            {/* Add to Cart Button */}
+            <button type="button" className="btn btn-outline-success mt-3" onClick={() => addToCard(product._id)}>Add to Cart</button>
           </div>
         </div>
       </div>
     </>
   );
+  
 }
